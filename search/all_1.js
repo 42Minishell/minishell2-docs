@@ -8,5 +8,6 @@ var searchData=
   ['env_5fpath_5flookup_12',['env_path_lookup',['../env_8h.html#a0f5d426219876cfa7d7666baf7db5c23',1,'path_resolver.c']]],
   ['env_5fpopulate_13',['env_populate',['../env_8h.html#a7739b161fc76d988f6a3d139bf2c646d',1,'init.c']]],
   ['env_5fupdate_5fenvp_14',['env_update_envp',['../env_8h.html#ae45026b278d264eab263e1be2f0d8b68',1,'env.c']]],
-  ['envp_15',['envp',['../env_8h.html#aec8f306eeed76bd21cdb44f4f0a92bf1',1,'t_env']]]
+  ['envp_15',['envp',['../env_8h.html#aec8f306eeed76bd21cdb44f4f0a92bf1',1,'t_env']]],
+  ['exec_16',['exec',['../minishell_8h.html#ad98ea49d24a508e66c4a3363af14efaa',1,'exec.c']]]
 ];

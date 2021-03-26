@@ -83,6 +83,7 @@ $(function() {
 <code>#include &quot;config.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="hashtable_8h_source.html">hashtable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="env_8h_source.html">env.h</a>&quot;</code><br />
+<code>#include &quot;tokenizer.h&quot;</code><br />
 <code>#include &quot;libft.h&quot;</code><br />
 </div>
 <p><a href="minishell_8h_source.html">Go to the source code of this file.</a></p>
@@ -106,7 +107,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mini
 <tr class="memitem:a77ebc64409a0843d511f153d6451e5d5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a77ebc64409a0843d511f153d6451e5d5">prompt</a> (<a class="el" href="minishell_8h.html#structt__state">t_state</a> *state)</td></tr>
 <tr class="memdesc:a77ebc64409a0843d511f153d6451e5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a prompt and take user input.  <a href="minishell_8h.html#a77ebc64409a0843d511f153d6451e5d5">More...</a><br /></td></tr>
 <tr class="separator:a77ebc64409a0843d511f153d6451e5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb9890b42ca65032f53c3d947f67f275"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#afb9890b42ca65032f53c3d947f67f275">path_resolve</a> (<a class="el" href="env_8h.html#structt__env">t_env</a> *env, char *exec)</td></tr>
+<tr class="memitem:ad98ea49d24a508e66c4a3363af14efaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ad98ea49d24a508e66c4a3363af14efaa">exec</a> (<a class="el" href="minishell_8h.html#structt__state">t_state</a> *state, char *path, <a class="el" href="structt__token.html">t_token</a> *args)</td></tr>
+<tr class="memdesc:ad98ea49d24a508e66c4a3363af14efaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute binary.  <a href="minishell_8h.html#ad98ea49d24a508e66c4a3363af14efaa">More...</a><br /></td></tr>
+<tr class="separator:ad98ea49d24a508e66c4a3363af14efaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9890b42ca65032f53c3d947f67f275"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#afb9890b42ca65032f53c3d947f67f275">path_resolve</a> (<a class="el" href="env_8h.html#structt__env">t_env</a> *env, char *<a class="el" href="minishell_8h.html#ad98ea49d24a508e66c4a3363af14efaa">exec</a>)</td></tr>
 <tr class="memdesc:afb9890b42ca65032f53c3d947f67f275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves path to binary.  <a href="minishell_8h.html#afb9890b42ca65032f53c3d947f67f275">More...</a><br /></td></tr>
 <tr class="separator:afb9890b42ca65032f53c3d947f67f275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -145,6 +149,50 @@ This is a GNL-Like "stream" for the standard input. </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ad98ea49d24a508e66c4a3363af14efaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98ea49d24a508e66c4a3363af14efaa">&#9670;&nbsp;</a></span>exec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#structt__state">t_state</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__token.html">t_token</a> *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute binary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>State object of current minishell instance </td></tr>
+    <tr><td class="paramname">path</td><td>Absolute path to binary </td></tr>
+    <tr><td class="paramname">args</td><td>Arguments for the binary, in token form </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="afb9890b42ca65032f53c3d947f67f275"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb9890b42ca65032f53c3d947f67f275">&#9670;&nbsp;</a></span>path_resolve()</h2>
 
@@ -206,7 +254,6 @@ This is a GNL-Like "stream" for the standard input. </td></tr>
 </div><div class="memdoc">
 
 <p>Show a prompt and take user input. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Currently it also handles _env and returns an empty string. This is behaviour that does not belong here, and is purely for POC reasons </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>The application state </td></tr>
